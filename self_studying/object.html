@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>オブジェクトの基礎</title>
+</head>
+
+<body>
+<script>
+
+	var card ={suit: "ハート", rank:"A" }; //オブジェクトの生成
+	
+	var obj={}; //空のオブジェクトの生成
+	
+	card.value =14; //プロパティの追加
+	/*console.log(card);*/
+	
+  delete card.rank;//プロパティの削除
+	/*console.log(card);*/
+	
+	console.log("suit" in card);
+	console.log("color" in card); //in演算子によるプロパティの存在確認
+
+</script>
+</body>
+</html>

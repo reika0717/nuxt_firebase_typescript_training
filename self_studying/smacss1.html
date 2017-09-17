@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無題ドキュメント</title>
+<style>
+	.is-active .btn{
+		color: #000;
+	}
+	
+	.is-active .menu{
+		display: block;
+	}
+	
+</style>
+</head>
+
+<body>
+
+<div id="content">
+	<div class="toolbar is-active">
+		<button id="btn-new" class="btn" data-action="menu">New</button>
+		<div id="menu-new" class="menu">
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+</div>
+	</div>	
+</div>
+
+<script type="text/javascript">
+	$('#btn-new').click(function(){
+		var el =$(this);
+		
+			el.addClass('is-pressed');
+		
+	$('#menu-'+el.id.substr(4)).removeClass('is-hidden');
+	});
+</script>
+</body>
+</html>
