@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>引数がオブジェクトの場合の参照渡し</title>
+</head>
+
+<body>
+<script>
+	function add1(p){
+		p.x=p.x+1;
+		p.y=p.y+1;
+		return p;
+	}
+	
+	var a = {x:3, y:4};
+	var b = add1(a);
+	console.log(a,b);
+	
+</script>
+</body>
+</html>

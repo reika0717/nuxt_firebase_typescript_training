@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>オブジェクトのメソッド</title>
+</head>
+
+<body>
+<script>
+
+/*円の面積を求めるメソッド*/
+var circle = {
+  center = {x:1.0, y:2.0},
+  radius = 2.5,
+  area = function(){
+    return Math.PI*this.radius*this.radius;
+  }
+};
+
+//オブジェクトのプロパティの内、値が関数値であるものをメソッドと呼ぶ。
+//メソッドを定義するには、プロパティの値として関数リテラルを指定する。
+//thisはその関数をメソッドにもつオブジェクトを示している。ここでは circle
+
+/*円を平行移動するためのメソッド*/
+circle.translate = function(a,b){
+  this.center.x = this.center.x+a;
+  this.center.y = this.center.y+b;
+};
+
+console.log{circle.translate(1,2)};
+
+</script>
+</body>
+</html>
