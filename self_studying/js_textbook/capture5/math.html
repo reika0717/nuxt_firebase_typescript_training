@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<script>
+/*原点からの距離r、x軸からの角度thetaにある点のx座標とy座標を求める関数*/
+function polarToDescartes(r,theta){
+  var angle= Math.PI*theta/180;
+  return {x:r*Math.cos(angle), y:r*Math.sin(angle)};
+}
+  
+</script>
+</body>
+</html>

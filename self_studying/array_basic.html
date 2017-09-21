@@ -5,7 +5,35 @@
 <title>配列の基礎</title>
 </head>
 <body>
+<script>
+  var evens = [2,4,6,8];
+  var.length //→4　存在する要素の最大のインデックスの値＋１（配列の長さ）
+
+  var various = [3.14, "pi", true, {x:1,y:2}, [2,4,6,8]]//要素は、変素と同じく任意の型をとることが出来る。
+
+  var a = ["A","B","C","D"];
+  a.length = 2;
+  console.log(a); //→["A","B"] lengthで指定した値以上のインデックスの要素は削除される。
+
+  /*Arrayコンストラクタによる生成*/
+  var evens = new Array(2,4,6,8);
+  var empty = new Array();
+  var a = new Array(2,,4);
+  var various = new Array(3.14, "pi", true, {x:1,y:2},[2,4,6,8]);
+
+  var x = new Array(3);
+  console.log(length.x); //→３　※引数が１個で且つ非負整数である場合要素でなく、長さの指定となる。
+
+  /*要素の追加*/
+  var a = new Array["A", "B", "c"];
+  a[3]="D";               //配列に要素の追加　a.push("D"); で末尾に要素追加できる。
+  console log(a); //→["A","B","C","D"]
+
+  /*要素の削除*/
+  delete a[1]; //配列の要素二番目消える。削除した要素が存在しなくなるだけなのでlengthの値は変わらない。（席はある。）
 
 
+
+</script>
 </body>
 </html>

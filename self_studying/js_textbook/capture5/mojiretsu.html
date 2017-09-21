@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文字列の操作</title>
+</head>
+<body>
+<script>
+var msg = new String("Everything is practice.")
+msg.length //→23
+msg.charAt(3) //→r
+
+/*文字列に対するメソッド使用例*/
+msg.substring(7,10) //→"ing" 7文字目から10文字目の手前までの文字列
+msg.slice(7,10) //→”ing" 上と同じ
+msg.slice(-3) //→"ce." 最後の三文字
+msg.slice(-9,-6) //→”pra" 末尾から数えて9文字目から6文字目の手前までの文字列
+msg.indexOf("t") //5 文字”t”が初めてでてくる位置
+msg.indexOf("i",10) // 11 10文字目以降で文字iが初めてでてくる位置
+msg.LastIndexOf("t") //18 文字”t”が最後に出てくる位置
+msg.split(" ") //["Everything","is","practice."] " "で文字列を分割
+msg.replace("p","P") //"p"を”P"置換
+msg.toUpperCase() //EVERYTHING IS PLACTICE. すべて大文字に変換
+msg.endWith(".") //true "."で終わっているかどうかの論理値
+msg.includes("thing") //true "thing"を含むかどうかの論理値
+msg.charCodeAt(0) //69 文字Eの文字コード
+msg.codePointAt(0) //69 文字”E"のコードポイント
+
+/*Stringコンストラクタのメソッド*/
+
+//引数の文字コードリストから文字列を生成して返す
+String.fromCharCode(0x4e9c) //→”亜”
+String.fronCharCode(65,66,67) //→”ABC"
+
+
+/*配列でのアクセス*/
+//文字列を読みだすのに、charAtメソッドの代わりに配列と同じカギ括弧演算子を使ことが出来る
+msg[3] //→"r"
+msg[msg.length-1] //→"."
+
+</script>
+
+</body>
+</html>

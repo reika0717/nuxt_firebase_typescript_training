@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>演算子</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  /*オブジェクトがnullでないか確認する際に使われる論理積演算子の例*/
+  var p = null;
+  p && p.name //→null pはfalseと評価される為それを返す。右辺は評価しない。
+  p = {name:"Tom", age:18};
+  p && p.name //→"Tom" pはtruwと評価され、p.nameが返される
+
+  /*複数の値の中からnullもしくはundefinedでない値を選びたいときに使われる論理和演算子*/
+  var time = time_interval || animationSetting.time ||33;
+  //time_intervalが設定されていなければanimationSetting.timeに。
+  //animationSetting.timeが設定されていなければ33秒に。といったことができる。
+
+  /*その他の演算子*/
+  //typeof演算子：オペランドのデータ型を示す文字列を返す
+    var s ="ABC";
+    console.log(typeof s); // →String
+
+  //条件演算子 (?:)
+  var parity = (a%2 == 0)? "偶数":"奇数"; //if文でも表せる
+
+  /*数値から文字列への変換*/
+  //Numberオブジェクトのメソッド
+  var n =26;
+  n.toString() //→"26" 引数をしていしないと10進数の文字列に変換
+  n.toString(2) //→"11010" 2進数の文字列に変換
+  n.toString(16) //→"1a" 16進数の文字列に変換
+  (26).toString(16) //→"1a" 数値に直接メソッドを適用する場合は（）で囲む
+
+  /*文字列から数値への変換*/
+  var s = "2"
+  s-0 //→2
+  +s  //→2
+  parseInt("3.14") // →3
+  parseFloat("3.14") //→3.14
+  parseInt("3.14 meters") //→3 数値の後の文字列は無視される
+  parseInt("0xFF") //→255 先頭に0xがあるため16進数に変換
+  parseInt("0.5") //→0
+  parseInt(".5") //→NaN 先頭に"."がある場合は数値と解釈されない
+  parseInt("ABC") //→NaN　数値と解釈できない
+  parseFloat("\100") //→NaN 先頭に"\"があるため数値と解釈されない
+  parseInt("101",2) //→5 文字列を2進数と解釈して変換
+  parseInt("ff",16) //→255 文字列を16進数と解釈して変換
+
+  /*Number関数*/
+  Number("2.71828") //→2.71828
+  Number(true) //→1
+  Number(false) //→0
+  Number(NaN) //→NaN
+  Number(undefined) //→NaN
+  Number(null) //→0
+  Number({x:1,y:2}) //→NaN
+  Number([1,2,3]) //→NaN
+
+</script>
+</body>
+</html>
