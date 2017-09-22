@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>コンソール</title>
+</head>
+<body>
+<script type="text/javascript">
+
+/*Consoleオブジェクトの主なメソッド*/
+  console.dir //オブジェクトの対話型リストを出力
+  console.error //エラーメッセージを出力
+  console.info //メッセージタイプのログを出力
+  console.time //指定されたタイマーを開始
+  console.timeEnd //指定されたタイマーを停止し、開始時からの経過時間を秒単位で出力
+  console.trace //スタックトレースを出力
+  console.warn // 警告メッセージを出力
+
+/*変換指定文字列*/
+  var name = "Tom";
+  var height = 172.5;
+  console.log("彼の名前は%Sで、身長は%fです。",name,height); //→彼の名前はTomで、身長は172.5です。
+    /*
+      %o : オブジェクトへのハイパーリンクに変換
+      %d : 整数値に変換
+      %i : 整数値に変換
+      %s : 文字列に変換
+      %f : 浮動小数点値に変換
+    */
+
+/*タイマー*/
+  console.time("answer_time");
+  alert("OKを押してください");
+  console.timeEnd("answer_time");
+
+</script>
+</body>
+</html>

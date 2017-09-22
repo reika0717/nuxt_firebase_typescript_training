@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvasに画像を読みこむ</title>
+<style>
+  canvas{border: 2px solid gray;}
+</style>
+<script>
+  window.onload = function(){
+    //canvas要素オブジェクトを取得
+    var canvas = document.getElementById("mycanvas");
+    //cavas描画コンテキストを取得
+    var ctx = canvas.getContext("2d");
+    //描画オブジェクトを生成する
+    var img = new Image();
+    //画像が読み込まれたらcanvasに描画する
+    img.onload = function(){
+      ctx.drawImage(img,0,0);
+    };
+    //画像のソースをURLで指定
+    img.src = "boat.png";
+  }
+</script>
+</head>
+<body>
+  <canvas id="mycanvas" width="640" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ダイアログ表示</title>
+</head>
+<body>
+<script type="text/javascript">
+  //警告ダイアログ
+    alert("こんにちは");
+
+  //入力ダイアログ
+    var name = prompt("名前を入力してください","田中花子");//第二引数に入力値の初期値を指定できる。
+      //数値を得たい場合は以下
+      var age = parseInt(prompt("年齢を入力してください"));
+      var height = parseInt(prompt("身長を入力してください"));
+
+  //確認ダイアログ(OKとキャンセルの2つのボタンをもつダイアログ)
+    var ret = confirm("リンクを表示してよろしいですか？");
+    //okボタンを押すとtrueが、キャンセルボタンを押すとfalseが戻り値となる。
+
+</script>
+</body>
+</html>

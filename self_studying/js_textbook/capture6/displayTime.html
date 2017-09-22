@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>時刻をコンソールに表示</title>
+</head>
+<body>
+  <input type="button" value="click" onclick="displayTime()">
+
+<script type="text/javascript">
+
+/*HTML要素の属性でイベントハンドラを指定する*/
+ //ボタンをクリックするとコンソールに現在時刻を表示するプログラム
+   function displayTime(){
+     var d = new Date();
+     console.log("現在の時刻は、"+ d.toLocaleString() + "です。");
+   }
+
+</script>
+</body>
+</html>

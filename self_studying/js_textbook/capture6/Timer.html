@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>タイマー</title>
+</head>
+<body>
+<script>
+/*指定時間後に実行するsetTimeout*/
+//第一引数には実行したい関数への参照、第二引数には遅延時間をミリ秒単位で指定
+  setTimeout(function(){
+    console.log(new Date());
+  },2000);
+
+
+/*指定時間ごとに繰り返し実行するsetInterval*/
+setInterval(function(){
+  console.log(new Date());
+},1000);
+</script>
+</body>
+</html>
