@@ -1,0 +1,206 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+  font-family: 'GothamCondensed-Book';
+  src: url("../font/GothamCondensed-Book.otf"); }
+
+@font-face {
+  font-family: 'GothamCondensed-Medium';
+  src: url("../font/GothamCondensed-Medium.otf"); }
+
+@font-face {
+  font-family: 'MidashiGothic';
+  src: url("../font/A-OTF-MidashiGoPr6N-MB31.otf"); }
+
+/* z-index */
+.headerArea {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 32px;
+  z-index: 4; }
+  .headerArea .logoWrapper {
+    position: relative; }
+    .headerArea .logoWrapper::after {
+      content: "";
+      width: 60px;
+      border-top: 1px solid #000;
+      position: absolute;
+      top: 50%;
+      left: calc(105% + 17px);
+      display: block; }
+    .headerArea .logoWrapper .logo {
+      width: 168px;
+      height: 23px; }
+  .headerArea .conversionBtn {
+    width: 199px;
+    height: 55px;
+    margin-right: 64px;
+    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.1)); }
+
+.globalNav {
+  font-family: 'GothamCondensed-Book'; }
+  .globalNav ul {
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding-left: 59px;
+    z-index: 4; }
+    .globalNav ul .globalNavList {
+      height: 20px;
+      font-size: 12px;
+      color: #C5C5C5;
+      letter-spacing: 1px;
+      padding-left: 12px;
+      border-left: 1px solid #C5C5C5;
+      margin-bottom: 4px;
+      vertical-align: middle;
+      display: flex;
+      align-items: center; }
+      .globalNav ul .globalNavList.on {
+        font-family: 'GothamCondensed-Medium';
+        font-size: 14px;
+        color: #000;
+        height: 42.27px;
+        border-left: 1px solid #000; }
+
+.visualArea {
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  .visualArea .mainVisual_1 {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .visualArea .mainText {
+    position: absolute;
+    width: 52%;
+    top: 69%;
+    left: 40%;
+    transform: translate(-50%, -50%); }
+
+.aboutArea {
+  width: 100vw;
+  position: relative; }
+  .aboutArea .sectionTitle_about {
+    width: 70%;
+    margin-left: 100px;
+    z-index: 1;
+    position: absolute;
+    top: 130px; }
+  .aboutArea .aboutContents {
+    font-family: 'MidashiGothic';
+    position: relative;
+    width: 1202px;
+    height: 542px;
+    margin: 460px auto 0;
+    background-color: white;
+    transform: translateX(-20px);
+    box-shadow: 0 40px 100px rgba(59, 47, 47, 0.1);
+    z-index: 2; }
+    .aboutArea .aboutContents .aboutAreaImage {
+      width: 557px;
+      position: absolute;
+      top: 150px;
+      left: 73px;
+      box-shadow: 0 20px 16px rgba(0, 0, 0, 0.07);
+      z-index: 3; }
+    .aboutArea .aboutContents .aboutContentsTitle {
+      font-size: 34px;
+      line-height: 68px;
+      position: absolute;
+      top: 38px;
+      right: 53px; }
+      .aboutArea .aboutContents .aboutContentsTitle .alphabet {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        letter-spacing: 1.6px; }
+    .aboutArea .aboutContents .aboutContentsList {
+      width: 354px;
+      list-style: none;
+      font-size: 16px;
+      position: absolute;
+      top: 257px;
+      right: 139px; }
+      .aboutArea .aboutContents .aboutContentsList li {
+        display: inline-block;
+        border-bottom: 3px solid;
+        border-image: linear-gradient(to right, rgba(238, 144, 0, 0.75) 0%, rgba(228, 1, 55, 0.84) 100%);
+        border-image-slice: 1;
+        padding-bottom: 6.6px;
+        margin-bottom: 36.3px; }
+
+.courseArea {
+  position: relative;
+  margin-top: 1500px; }
+  .courseArea .sectionTitle_course {
+    width: 1273px;
+    position: absolute;
+    top: 670px;
+    right: -16px;
+    z-index: 2; }
+  .courseArea .courseListsWrapper {
+    width: 1019px;
+    height: 637px;
+    margin: -872px auto 0;
+    background-color: white;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+    position: relative; }
+    .courseArea .courseListsWrapper .courseListsColorFrame {
+      position: absolute;
+      top: 166px;
+      left: -38px;
+      z-index: 1; }
+    .courseArea .courseListsWrapper .courseLists {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: -92px;
+      top: 479px;
+      padding: 0;
+      margin: 0;
+      z-index: 3; }
+      .courseArea .courseListsWrapper .courseLists .courseList {
+        position: relative;
+        width: 383px;
+        height: 456px;
+        background-color: white;
+        box-shadow: 0 32px 42px rgba(50, 58, 58, 0.06);
+        margin-right: 27px;
+        z-index: 3; }
+        .courseArea .courseListsWrapper .courseLists .courseList:last-child {
+          margin-right: 0; }
+        .courseArea .courseListsWrapper .courseLists .courseList .courseListImage {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 383px; }
+        .courseArea .courseListsWrapper .courseLists .courseList .courseTitle {
+          white-space: nowrap;
+          font-size: 24px;
+          font-family: 'MidashiGothic';
+          position: absolute;
+          top: 257px;
+          left: 50%;
+          transform: translateX(-50%); }
+          .courseArea .courseListsWrapper .courseLists .courseList .courseTitle .alphabet {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            letter-spacing: 1.6px; }
+        .courseArea .courseListsWrapper .courseLists .courseList .courseDescription {
+          font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+          font-size: 14px;
+          line-height: 24px;
+          position: absolute;
+          top: 303px;
+          width: 342.58px;
+          left: 50%;
+          transform: translateX(-50%); }
