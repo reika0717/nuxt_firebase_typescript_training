@@ -1,1 +1,1 @@
-var rellax=new Rellax(".rellax");
+var rellax=new Rellax(".rellax");$(function(){$(".globalNavList a").click(function(){var t=500,a=$(this).attr("href"),e=$("#"==a||""==a?"html":a),l=0;return l="#priceArea"===a?e.offset().top-1600:"#thirdArea"===a?e.offset().top-500:e.offset().top-280,$("html, body").animate({scrollTop:l},500,"swing"),!1})});

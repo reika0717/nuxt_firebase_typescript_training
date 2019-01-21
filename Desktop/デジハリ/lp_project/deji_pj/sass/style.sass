@@ -9,14 +9,20 @@
 	src: url('../font/GothamCondensed-Medium.otf')
 
 @font-face
+	font-family: 'Gotham-Medium'
+	src: url('../font/GothamMedium.ttf')
+
+@font-face
 	font-family: 'MidashiGothic'
 	src: url('../font/A-OTF-MidashiGoPr6N-MB31.otf')
 
 /* z-index */
+$LAYER_0: 0
 $LAYER_1: 1
 $LAYER_2: 2
 $LAYER_3: 3
 $LAYER_TOP: 4
+$LAYER_HEADER: 5
 
 .headerArea
 	width: 100vw
@@ -26,7 +32,7 @@ $LAYER_TOP: 4
 	position: fixed
 	top: 0
 	left: 32px
-	z-index: $LAYER_TOP	
+	z-index: $LAYER_HEADER
 	// background-color: rgba(255, 255, 255, .9)
 	.logoWrapper
 		position: relative
@@ -42,49 +48,90 @@ $LAYER_TOP: 4
 			width: 168px
 			height: 23px
 	.conversionBtn
+		cursor: pointer
 		width: 199px
 		height: 55px
 		margin-right: 64px
-		filter: drop-shadow(0px 20px 40px rgba(0,0,0,0.1))
+		filter: drop-shadow(0px 20px 40px rgba(59,49,49,.15))
 
 .globalNav
 	font-family: 'GothamCondensed-Book'
+	height: 100vh
+	list-style: none
+	position: fixed
+	z-index: $LAYER_2
+	/* top: 39% */
+	left: 0
+	vertical-align: middle
+	/* transform: translateY(-50%) */
+	padding-left: 59px
+	width: 148px
+	box-sizing: border-box
+	// background-color: rgba(255, 255, 255, .5)
+	// background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%)
+	display: flex
+	align-items: center
 	ul
-		list-style: none
-		position: fixed
-		top: 50%
-		left: 0
-		transform: translateY(-50%)
-		padding-left: 59px
-		z-index: $LAYER_TOP
+		padding: 0
 		.globalNavList
-			height: 20px
-			font-size: 12px
-			color: #C5C5C5
-			letter-spacing: 1px
-			padding-left: 12px
-			border-left: 1px solid #C5C5C5
-			margin-bottom: 4px
-			vertical-align: middle
-			display: flex
-			align-items: center
-			&.on
-				font-family: 'GothamCondensed-Medium'
-				font-size: 14px
-				color: #000
-				height: 42.27px
-				border-left: 1px solid #000
+			list-style: none
+			a
+				font-size: 12px
+				color: #C5C5C5
+				letter-spacing: 1px
+				height: 20px
+				padding-left: 12px
+				border-left: 1px solid #C5C5C5
+				margin-bottom: 4px
+				vertical-align: middle
+				display: flex
+				align-items: center
+				cursor: pointer
+				text-decoration: none
+				transition: .3s
+				&.on
+					font-family: 'GothamCondensed-Medium'
+					font-size: 14px
+					color: #000
+					height: 42.27px
+					border-left: 1px solid #000
 
 .visualArea
 	width: 100vw
 	height: 100vh
 	position: relative
-	.mainVisual_1
-		width: 80%
+	.mainVisualWrpper
+		.mainVisuals
+			list-style: none
+			.mainVisual
+				img
+					width: 80%
+					height: 673px
+					object-fit: cover
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+			.mainVisual_2,
+			.mainVisual_3
+				display: 
+	.visualAreaTextScroll
+		font-family: 'Gotham-Medium'
+		font-size: 14px
+		transform: rotate(90deg)
 		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
+		right: -76px
+		bottom: 211px
+		letter-spacing: 4px
+		margin: 0
+		&:after
+			content: ''
+			width: 147.55px
+			display: inline-block
+			background: black
+			height: 1px
+			margin-left: 24px
+			margin-bottom: 5px
 	.mainText
 		position: absolute
 		width: 52%
@@ -92,121 +139,651 @@ $LAYER_TOP: 4
 		left: 40%
 		transform: translate(-50%, -50%)
 
-.aboutArea
+.content_wrapper
+	padding: 0 90px 0 148px
 	width: 100vw
-	position: relative
-	.sectionTitle_about
-		width: 70%
-		margin-left: 100px
-		z-index: $LAYER_1
-		position: absolute
-		top: 130px
-	.aboutContents
-		font-family: 'MidashiGothic'
+	box-sizing: border-box
+	max-width: 1440px
+	margin: 0 auto
+	overflow: hidden
+	transition: .5s
+	.aboutArea
+		width: 100%
 		position: relative
-		width: 1202px
-		height: 542px
-		margin: 460px auto 0
-		background-color: white
-		transform: translateX(-20px)
-		box-shadow: 0 40px 100px rgba(59, 47, 47, .1)
-		z-index: $LAYER_2
-		.aboutAreaImage
-			width: 557px
-			position: absolute
-			top: 150px
-			left: 73px
-			box-shadow: 0 20px 16px rgba(0, 0, 0, .07)
-			z-index: $LAYER_3
-		.aboutContentsTitle
-			font-size: 34px
-			line-height: 68px
-			position: absolute
-			top: 38px
-			right: 53px
-			.alphabet
-				font-family: 'Montserrat', sans-serif
-				font-weight: bold
-				letter-spacing: 1.6px
-		.aboutContentsList
-			width: 354px
-			list-style: none
-			font-size: 16px
-			position: absolute
-			top: 257px
-			right: 139px
-			li
-				display: inline-block
-				border-bottom: 3px solid
-				border-image: linear-gradient(to right, rgba(238, 144, 0, .75) 0%, rgba(228, 1, 55, .84) 100%)
-				border-image-slice: 1	
-				padding-bottom: 6.6px
-				margin-bottom: 36.3px
-
-.courseArea
-	position: relative
-	margin-top: 1500px
-	.sectionTitle_course
-		width: 1273px
-		position: absolute
-		top: 670px
-		right: -16px
-		z-index: $LAYER_2
-	.courseListsWrapper
-		width: 1019px
-		height: 637px
-		margin: -872px auto 0
-		background-color: white
-		box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1)
-		position: relative
-		.courseListsColorFrame
-			position: absolute
-			top: 166px
-			left: -38px
+		.sectionTitle_about
+			width: 992px
+			margin-left: 100px
 			z-index: $LAYER_1
-		.courseLists
-			list-style: none
-			display: flex
-			justify-content: center
 			position: absolute
-			left: -92px
-			top: 479px
-			padding: 0
-			margin: 0
-			z-index: $LAYER_3
-			.courseList
-				position: relative
-				width: 383px
-				height: 456px
-				background-color: white
-				box-shadow: 0 32px 42px rgba(50, 58, 58, 0.06)
-				margin-right: 27px
+			top: 130px
+		.aboutContents
+			font-family: 'MidashiGothic'
+			position: relative
+			width: 100%
+			max-width: 1202px
+			height: 542px
+			margin-top: 370px
+			background-color: white
+			transform: translateX(-20px)
+			box-shadow: 0 40px 100px rgba(59, 47, 47, .1)
+			z-index: $LAYER_2
+			box-sizing: border-box
+			padding-top: 74px
+			.aboutAreaImage
+				width: 46.3%
+				min-width: 438px
+				max-width: 557px
+				position: absolute
+				top: 150px
+				left: 73px
+				box-shadow: 0 20px 16px rgba(0, 0, 0, .07)
 				z-index: $LAYER_3
-				&:last-child
-					margin-right: 0
-				.courseListImage
-					position: absolute
-					top: 0
-					left: 0
-					width: 383px
-				.courseTitle
-					white-space: nowrap
-					font-size: 24px
-					font-family: 'MidashiGothic'
-					position: absolute
-					top: 257px
-					left: 50%
-					transform: translateX(-50%)
+			.aboutContentsTextWrapper
+				width: 38%
+				margin-left: 58%
+				.aboutContentsTitle
+					font-size: 34px
+					line-height: 68px
 					.alphabet
 						font-family: 'Montserrat', sans-serif
 						font-weight: bold
 						letter-spacing: 1.6px
-				.courseDescription
-					font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+				.aboutContentsList
+					width: 354px
+					list-style: none
+					font-size: 16px
+					padding: 0
+					li
+						display: inline-block
+						border-bottom: 3px solid
+						border-image: linear-gradient(to right, rgba(238, 144, 0, .75) 0%, rgba(228, 1, 55, .84) 100%)
+						border-image-slice: 1	
+						padding-bottom: 6.6px
+						margin-bottom: 36.3px
+
+@media screen and (max-width: 1432px)
+	.content_wrapper
+		.aboutArea
+			.sectionTitle_about
+			.aboutContents
+				.aboutAreaImage
+				.aboutContentsTextWrapper
+					width: 356px
+					.aboutContentsTitle
+					.aboutContentsList
+						li
+							margin-bottom: 22.3px
+
+.content_wrapper
+	.courseArea
+		position: relative
+		margin-top: 1250px
+		width: 100%
+		.sectionTitle_course
+			width: 1273px
+			position: absolute
+			top: 670px
+			right: -16px
+			z-index: $LAYER_2
+		.courseListsWrapper
+			width: calc(100% - 183px)
+			height: 637px
+			margin: -872px auto 0
+			background-color: white
+			box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1)
+			position: relative
+			.courseListsColorFrame
+				width: 100%
+				position: absolute
+				top: 346px
+				left: -38px
+				z-index: $LAYER_1
+			.courseLists
+				list-style: none
+				display: flex
+				justify-content: center
+				position: absolute
+				left: -92px
+				top: 219px
+				padding: 0
+				margin: 0
+				z-index: $LAYER_3
+				width: 118%
+				.courseList
+					position: relative
+					width: 31.333333%
+					background-color: white
+					box-shadow: 0 32px 42px rgba(50, 58, 58, 0.06)
+					margin-right: 27px
+					padding-bottom: 21px
+					z-index: $LAYER_3
+					&:last-child
+						margin-right: 0
+					.courseListImage
+						width: 100%
+					.courseTitle
+						font-size: 24px
+						font-family: 'MidashiGothic'
+						width: 86%
+						margin: 19.17px auto 11px
+						.alphabet
+							font-family: 'Montserrat', sans-serif
+							font-weight: bold
+							letter-spacing: 1.6px
+					.courseDescription
+						font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+						font-size: 14px
+						line-height: 24px
+						width: 86%
+						margin: 0 auto
+
+	.firstArea
+		display: flex
+		justify-content: center
+		position: relative
+		margin-top: 360px
+		width: 100%
+		.sectionTitleWrapper
+			position: absolute
+			z-index: $LAYER_2
+			left: -78px
+			top: 1171px
+			.sectionTitle_01
+		.colorBracket_right
+			position: absolute
+			z-index: $LAYER_1
+			top: 385px
+			right: -49px
+		.firstAreaContents
+			width: 80%
+			background-color: white
+			box-shadow: 0 40px 100px rgba(129, 106, 106, .1)
+			margin-left: 52px
+			min-width: 960px
+			padding-bottom: 140px
+			.firstAreaContentsTitle
+				font-family: 'MidashiGothic'
+				font-size: 32px
+				margin-left: 44.3%
+				margin-top: -16px
+				position: relative
+				z-index: $LAYER_3
+				min-width: 459px
+			.firstAreaContentsDescription
+				font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+				font-size: 16px
+				color: #4A4A4A
+				margin-left: 44.3%
+				line-height: 32px
+				position: relative
+				z-index: $LAYER_3
+				max-width: 459px
+			.firstAreaContentsLists
+				margin-top: 50px
+				.firstAreaContentsList_2
+					margin-right: -55px
+					justify-content: flex-end
+					margin-top: 63px
+				.firstAreaContentsList
+					display: flex
+					align-items: flex-start
+					height: 360px
+					.trainerPicture
+						box-shadow: 0 32px 42px rgba(0, 0, 0, .06)
+					.trainerPicture_1
+						width: 452px
+						margin-left: -91px
+						margin-top: 240px
+					.trainerPicture_2
+						width: 474px
+						margin-top: 299px
+					.trainerTextWrapper_1
+						margin-left: 8%
+						margin-right: 5%
+						max-width: 404px
+					.trainerTextWrapper_2
+						width: 390px
+						margin-right: 46px
+					.trainerTextWrapper
+						.trainerNameWrapper
+							font-family: 'MidashiGothic'
+							.alphabet
+								font-family: 'Montserrat'
+							.trainerPosition
+								font-size: 18px
+								color: #989898
+							.trainerName
+								font-size: 22px
+								margin-top: 15px
+							.trainerName
+								position: relative
+						.trainerDescription
+							font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+							line-height: 28px
+							font-size: 14px
+					&:nth-of-type(1)
+						.trainerTextWrapper
+							.trainerNameWrapper
+								.trainerName
+									&:before
+										content: ''
+										width: 87.69px
+										height: 2px
+										background-color: black
+										display: inline-block
+										position: absolute
+										top: 50%
+										left: -117px
+										transform: translateY(-50%)
+					&:nth-of-type(2)
+						.trainerTextWrapper
+							.trainerNameWrapper
+								.trainerName
+									&:after
+										content: ''
+										width: 87.69px
+										height: 2px
+										background-color: black
+										display: inline-block
+										position: absolute
+										top: 50%
+										left: 402px
+										transform: translateY(-50%)
+										z-index: $LAYER_1
+
+	.secondArea
+		position: relative
+		display: flex
+		justify-content: center
+		margin-top: 388px
+		.sectionTitleWrapper
+			position: absolute
+			z-index: $LAYER_2
+			top: 2238px
+			right: -93px
+		.colorBracket_left
+			position: absolute
+			z-index: $LAYER_1
+			top: 723px
+			left: .7%
+		.secondAreaContents
+			width: 891px
+			height: 1606px
+			background-color: white
+			box-shadow: 0 40px 100px rgba(47, 41, 41, .1)
+			margin-left: 55px
+
+			.secondAreaContentsTitle
+				font-family: 'MidashiGothic'
+				font-size: 32px
+				margin-left: 77px
+				margin-top: -19px
+
+				position: relative
+				z-index: 3
+			.secondAreaContentsDescription
+				font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+				font-size: 16px
+				color: #4A4A4A
+				width: 400px
+				margin-left: 77px
+				line-height: 32px
+				position: relative
+				z-index: 3
+				margin-top: 41px
+			.lessonLists
+				list-style: none
+				display: flex
+				padding: 0
+				&:nth-of-type(1)
+					margin: 350px 0 40px -56px
+				&:nth-of-type(2)
+					margin: 0 0 40px 126px
+				&:nth-of-type(3)
+					margin: 0 0 0 20px
+				.lessonList
+					width: 346px
+					background-color: white
+					box-shadow: 0 32px 42px rgba(45, 40, 40, .06)
+					padding-bottom: 12px
+					&:nth-of-type(2)
+						margin-left: 35px
+					.lessonListImage
+						width: 322px
+						margin: 12px 12px 0 12px
+					.lessonTitle
+						font-family: 'MidashiGothic'
+						font-size: 20px
+						margin: 8px 12px 0 12px
+					.alphabet
+					font-family: 'Montserrat'
+					.lessonDescription
+						font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+						line-height: 28px
+						font-size: 14px
+						margin: 6px 0 0 12px
+					.lessonTeacher
+						margin-left: 12px
+						display: flex
+						align-items: center
+						.lessonTeacherImage
+							width: 38px
+						.lessonTeacherName
+							font-family: 'MidashiGothic'
+							font-size: 14px
+							margin-left: 4px
+
+	.thirdArea
+		margin-top: 570px
+		position: relative
+		.sectionTitleWrapper
+			position: absolute
+			z-index: $LAYER_2
+			top: 3200px
+			left: -106px
+		.colorBracket_right
+			position: absolute
+			z-index: $LAYER_1
+			top: 900px
+			left: 869px
+		.thirdAreaContents
+			width: 79.6%
+			background-color: white
+			box-shadow: 0 40px 100px rgba(129, 106, 106, .1)
+			margin-left: 121.5px
+			box-sizing: border-box
+			padding: 98px 70px 0 104px
+			position: relative
+			min-width: 957px
+			.thirdAreaContentsTitle
+				font-family: 'MidashiGothic'
+				font-size: 32px
+				position: absolute
+				margin: 0
+				top: -21px
+				right: 21.4%
+			.thirdAreaContentsAbout
+				display: flex
+				z-index: $LAYER_3
+				position: relative
+				height: 300px
+				.thirdAreaContentsAboutVisual
+					width: 384px
+					height: 264px
+					box-shadow: 0 32px 42px rgba(0, 0, 0, .06)
+					margin-top: 550px
+				.thirdAreaContentsAboutText
+					margin-left: 57px
+					width: 343px
+					margin-top: 16px
+					.thirdAreaContentsAboutTitle
+						font-family: 'MidashiGothic'
+						font-size: 20px
+						margin-bottom: 33px
+						position: relative
+						&:before
+							content: ''
+							width: 87.69px
+							height: 2px
+							background-color: black
+							display: inline-block
+							position: absolute
+							top: 50%
+							left: -117px
+							transform: translateY(-50%)
+					.thirdAreaContentsDescription
+						font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+						font-size: 14px
+						color: #4A4A4A
+						line-height: 28px
+			.thirdAreaThmbnails
+				display: flex
+				margin-top: 61px
+				list-style: none
+				margin-left: -26.6%
+				padding: 0
+				width: 100vw
+				overflow-x: scroll
+				.thirdAreaThmbnail
+					margin-left: 20px
+					&:nth-of-type(1)
+						margin-left: 0
+					.thirdAreaThmbnail
+						width: 619px
+
+	.priceArea
+		position: relative
+		margin-top: 480px
+		width: 100%
+		.sectionTitleWrapper
+			position: absolute
+			z-index: $LAYER_3
+			top: 3026px
+			left: 70px
+		.priceBackground
+			position: absolute
+			z-index: $LAYER_1
+			width: 96%
+			top: -1447px
+			left: 45px
+			height: 701px
+		.priceAreaContents
+			margin-top: 1400px
+			width: 96%
+			box-sizing: border-box
+			background-color: white
+			box-shadow: 0 40px 100px rgba(129, 106, 106, .1)
+			margin-left: 82.5px
+			padding: 76px 68px 70px 77px
+			position: relative
+			z-index: $LAYER_2
+			transform: translateY(124px)
+			.priceAreaLists
+				list-style: none
+				margin: 0
+				padding: 0
+				.priceAreaList
+					margin-top: 27px
+					&:nth-of-type(1)
+						margin-top: 0px
+					dl
+						display: flex
+						font-family: 'MidashiGothic'
+						font-size: 24px
+						margin: 0
+						dt
+							width: 328px
+							min-width: 328px
+							height: 108px
+							display: flex
+							justify-content: center
+							align-items: center
+							color: white
+						dd
+							margin: 0
+							width: 720px
+							box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.04)
+							display: flex
+							justify-content: space-around
+							align-items: center
+							.priceAreaListTerm
+								margin-left: 86px
+							.priceAreaListPrice
+								transform: translateX(35px)
+								.tax
+									font-size: 14px
+									margin-left: -5px
+				.priceAreaList_1
+					dl
+						dt
+						 background-image: linear-gradient(253deg, #f59051, #f5515f 43%, #9f041b)
+				.priceAreaList_2
+					dl
+						dt
+							background-image: linear-gradient(253deg, #ffba81, #e79c00)
+				.priceAreaList_3
+					dl
+						dt
+						 background-image: linear-gradient(71deg, rgba(118, 121, 164, 0.84), rgba(162, 21, 120, 0.73))
+				.priceAreaList_4
+					dl
+						dt
+						 background-image: linear-gradient(72deg, #53ffd6, #6daad7)
+			.priceAreaSubTexts
+				margin-top: 26px
+				p
 					font-size: 14px
-					line-height: 24px
-					position: absolute
-					top: 303px
-					width: 342.58px
-					left: 50%
-					transform: translateX(-50%)
+					font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+
+	.flowArea
+		position: relative
+		margin-top: -950px
+		width: 100%
+		margin-bottom: -311px
+		.sectionTitleWrapper
+			position: absolute
+			z-index: $LAYER_3
+			top: 5060px
+			right: -88px
+		.flowAreaContents
+			width: 83.2%
+			box-sizing: border-box
+			background-color: white
+			box-shadow: 0 40px 100px rgba(47, 41, 41, .1)
+			margin-left: 100px
+			position: relative
+			z-index: $LAYER_2
+			padding-bottom: 57px
+			.flowAreaVerticalLine
+				width: 6px
+				height: 1245px
+				background-image: linear-gradient(180deg, rgba(238, 144, 0, .75), rgba(228, 1, 55, .84))
+				position: absolute
+				left: 50%
+				top: 439px
+				z-index: $LAYER_3
+				transform: translateX(-50%)
+			.flowAreaContentsLists
+				padding: 14px 0 0 0
+				list-style: none
+				.flowAreaContentsList
+					width: 994px
+					height: 286px
+					box-shadow: 0 40px 100px rgba(58, 51, 51, .04)
+					display: flex
+					align-items: center
+					background-color: white
+					position: relative
+					margin-top: 176px
+					z-index: $LAYER_TOP
+					.flowPicture
+						width: 500px
+						height: 400px
+						margin-top: 1580px
+					.flowTextWrapper
+						width: 395px
+						margin: 0 57px
+						.flowName
+							font-family: 'MidashiGothic'
+							font-size: 24px
+						.flowDescription
+							font-size: 14px
+							font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif
+							line-height: 28px
+			.flowAreaContentsList_1,
+			.flowAreaContentsList_3
+				margin-left: -100px
+			.flowAreaContentsList_2,
+			.flowAreaContentsList_4
+				margin-left: 100px
+			.flowAreaBottomArea
+				text-align: center
+				margin-top: 89px
+				.briefingBtn
+					cursor: pointer
+					width: 374px
+					margin-bottom: 70px
+					filter: drop-shadow(0px 20px 40px rgba(63,52,52,.06))
+				.flowAreaLinks
+					list-style: none
+					display: flex
+					justify-content: center
+					margin: -17px 0 0 0
+					.flowAreaLink
+						font-family: 'MidashiGothic'
+						font-size: 24px
+						color: #979797
+						&:nth-of-type(1)
+							margin-left: -24px
+						&:nth-of-type(2)
+							margin-left: 50px
+
+	.studioPhotoThumbnails
+		width: 100vw
+		overflow-x: hidden
+		position: absolute
+		left: 0
+		.photoWrapper
+			list-style: none
+			display: flex
+			padding: 0
+			margin: 0
+			.studioPhoto
+				img
+					height: 384px
+
+
+.footerArea
+	width: 100vw
+	margin-top: 567px
+	display: flex
+	padding-bottom: 58px
+	.logoWrapper
+		width: 43%
+		margin: -20px 0 0 0
+		display: flex
+		align-items: center
+		justify-content: center
+		.logo
+			width: 309px
+	.schoolListWrappr
+		list-style: none
+		display: flex
+		margin: 0
+		padding: 0
+		width: 57%
+		.schoolList
+			margin-left: 95px
+			address
+				font-style: normal
+				.schoolInquiry
+					margin: 0
+					.schoolName
+						font-family: 'MidashiGothic'
+						font-size: 22px
+					.schoolInquiryContent
+						margin: 0
+						.schoolInquiryTitle
+							font-size: 18px
+							font-weight: bold
+							margin-top: 44px
+							&.tell
+								margin-top: 67px
+						.address
+							font-family: 'YuGothic'
+							font-size: 16px
+							line-height: 28px
+						.addressDirection
+							font-size: 14px
+							color: #9B9B9B
+							line-height: 27px
+							margin-bottom: 3px
+						.googleMapLink
+							color: black
+							font-family: 'Montserrat'
+							font-size: 14px
+			&:nth-of-type(1)
+				margin-left: 0
+@media screen and (max-width: 1140px)
+	.content_wrapper
+		padding: 0

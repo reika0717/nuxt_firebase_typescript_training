@@ -10,83 +10,424 @@
   <title>デジタルハリウッドSTUDIO by LIG｜Webデザイナースクール</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
   <header class="headerArea">
     <h1 class="logoWrapper">
-      <img id="logo" class="logo" src="img/logo.png" alt="デジタルハリウッドSTUDIO 上野 by LIG">
+      <a href="index.html">
+        <img id="logo" class="logo" src="img/logo.png" alt="デジタルハリウッドSTUDIO 上野 by LIG">
+      </a>
     </h1>
-    <img class="conversionBtn" src="img/conversion_btn.png" alt="無料相談会">
+    <img class="conversionBtn" src="img/conversionBtn_consultation.png" alt="無料相談会">
   </header>
-  <nav class="globalNav">
-    <ul>
-      <li class="globalNavList on">ABOUT</li>
-      <li class="globalNavList">COURSE</li>
-      <li class="globalNavList">01</li>
-      <li class="globalNavList">02</li>
-      <li class="globalNavList">03</li>
-      <li class="globalNavList">PRICE</li>
-      <li class="globalNavList">FLOW</li>
-    </ul>
-  </nav>
-
-  <section class="visualArea">
-    <div class="mainVisuals">
-      <img src="img/mainVisual_1.png" alt="" class="mainVisual_1">
-<!--       <img src="" alt="" class="mainVisual_2">
-      <img src="" alt="" class="mainVisual_3">
- -->  
-      <img src="img/mainText.png" alt="" class="mainText">
+    <nav class="globalNav">
+      <ul>
+        <li class="globalNavList">
+          <a href="#aboutArea" class="on">
+            ABOUT    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#courseArea">
+            COURSE    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#firstArea">
+            01    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#secondArea">
+            02    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#thirdArea">
+            03    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#priceArea">
+            PRICE    
+          </a>
+        </li>
+        <li class="globalNavList">
+          <a href="#flowArea">
+            FLOW    
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="visualArea" id="visualArea">
+      <div class="mainVisualWrpper">
+        <ul class="mainVisuals">
+          <li class="mainVisual">
+            <img src="img/mainVisual_1.png" alt="" class="mainVidual mainVisual_1">
+          </li>
+          <li class="mainVisual">
+            <img src="img/mainVisual_1.png" alt="" class="mainVidual mainVisual_2">
+          </li>
+          <li class="mainVisual">
+            <img src="img/mainVisual_1.png" alt="" class="mainVidual mainVisual_3">
+          </li>
+        </ul>
+        <img src="img/mainText.png" alt="" class="mainText">
+        <p class="visualAreaTextScroll">SCROLL</p>
       </div>
-  </section>
-
-  <section class="aboutArea">
-    <h2 class="sectionTitleWrapper">
-      <img src="img/sectionTitle_about.png" alt="about" class="sectionTitle_about rellax" data-rellax-speed="8">
-    </h2>
-    <div class="aboutContents rellax" data-rellax-speed="1">
-      <img src="img/aboutVisual.png" alt="" class="aboutAreaImage rellax" data-rellax-speed="3">
-      <p class="aboutContentsTitle"><span class="alphabet">Web</span>のプロが集う場所<span class="alphabet">LIG</span>が<br>あなたの将来を変えます。
-      </p>
-      <ul class="aboutContentsList">
-        <li>未経験からWebデザイナーへ就職・転職したい！</li>
-        <li>Webスキルを身につけてキャリアアップしたい！</li>
-        <li>プロのWebクリエイターから学びたい！</li>
-      </ul>      
+    </section>
+    <div class="content_wrapper">
+      <section class="aboutArea" id="aboutArea">
+        <h2 class="sectionTitleWrapper">
+          <img src="img/sectionTitle_about.png" alt="about" class="sectionTitle_about rellax" data-rellax-speed="8">
+        </h2>
+        <div class="aboutContents rellax" data-rellax-speed="1">
+          <img src="img/aboutVisual.png" alt="" class="aboutAreaImage rellax" data-rellax-speed="3">
+          <div class="aboutContentsTextWrapper">
+            <p class="aboutContentsTitle"><span class="alphabet">Web</span>のプロが集う場所<span class="alphabet">LIG</span>があなたの将来を変えます。
+            </p>
+            <ul class="aboutContentsList">
+              <li>未経験からWebデザイナーへ就職・転職したい！</li>
+              <li>Webスキルを身につけてキャリアアップしたい！</li>
+              <li>プロのWebクリエイターから学びたい！</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="courseArea" id="courseArea">
+        <h2 class="sectionTitleWrapper">
+          <img src="img/sectionTitle_course.png" alt="course" class="sectionTitle_course rellax" data-rellax-speed="8">
+        </h2>
+        <div class="courseListsWrapper rellax" data-rellax-speed="1">
+          <img src="img/colorFrame.png" alt="" class="courseListsColorFrame rellax" data-rellax-speed="3">
+          <ul class="courseLists rellax" data-rellax-speed="1">
+            <li class="courseList">
+              <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_1">
+              <p class="courseTitle"><span class="alphabet">Web</span>デザイナー専攻</p>
+              <p class="courseDescription">Webデザイナーを目指して、Web制作会社で用いられる基礎スキルから最新のスキルまでを習得！デザイン、コーディング、マーケティングスキル、ディレクションスキル等、Webデザイナーとして必要な知識やスキルを学ぶことができます。</p>
+            </li>
+            <li class="courseList">
+              <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_2">
+              <p class="courseTitle"><span class="alphabet">Web</span>プログラミング専攻</p>
+              <p class="courseDescription">Web系エンジニア、フロントエンドエンジニアとして必要なプログラミングや開発スキルを習得！DTPデザイナーからWeb業界へ転身をしたい方や、コーダーとしてスキルアップを目指したい方にオススメのコースです。
+              </p>
+            </li>
+            <li class="courseList">
+              <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_3">
+              <p class="courseTitle">ネット動画クリエイター専攻</p>
+              <p class="courseDescription">動画領域に必要な最新スキルとクリエイティブ力を習得！基礎〜応用までの動画編集スキルや撮影スキルだけでなく、企画力やシナリオ作成、動画マーケティングなど、第一線で活躍するクリエイターに必要なスキルを基礎から学ぶことができます。
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="firstArea" id="firstArea">
+        <h2 class="sectionTitleWrapper">
+          <img src="img/sectionTitle_01.png" alt="01" class="sectionTitle_01 rellax" data-rellax-speed="8">
+        </h2>
+        <img src="img/colorBracket_right.png" class="colorBracket_right rellax" alt="" data-rellax-speed="3">
+        <div class="firstAreaContents rellax" data-rellax-speed="1">
+          <p class="firstAreaContentsTitle">プロ講師に直接教えてもらえる</p>
+          <p class="firstAreaContentsDescription">STUDIO by LIGでは、現役のWebデザイナー、エンジニアとして活動されている方がトレーナーとして在籍しております。基本的な技術の指導だけではなく、講師陣のWeb業界での働き方や実践的な視点を吸収することで、卒業後のキャリアに役立てていくことができます。</p>
+          <ul class="firstAreaContentsLists">
+            <li class="firstAreaContentsList firstAreaContentsList_1">
+              <img src="img/01Visual_1.png" alt="" class="trainerPicture trainerPicture_1 rellax" data-rellax-speed="1">
+              <div class="trainerTextWrapper trainerTextWrapper_1">
+                <div class="trainerNameWrapper">
+                  <p class="trainerPosition">上野校 Webデザイナー専攻トレーナー</p>
+                  <p class="trainerName">中里寛さん</p>
+                </div>
+                <div class="trainerDescription">
+                  <p>多摩美術大学グラフィックデザイン学科卒業、フリーのWebディレクター・デザイナー・プログラマーとして活動。個人経営店・中小企業・総合病院・一部上場企業などクライアントの分野や大小を問わず、ニーズにマッチした制作を行う。デザイン業務においてはWebのみならずポスターやチラシ・名刺などの印刷メディアも手がける。2009年から現在まで、東京都立工芸高等学校デザイン科において市民講師として映像とWebの授業を担当。2017年より中小企業・一部上場企業にて研修講師を担当。また複数企業のWeb制作における顧問としても活動中。</p>
+                </div>
+              </div>
+            </li>
+            <li class="firstAreaContentsList firstAreaContentsList_2">
+              <div class="trainerTextWrapper trainerTextWrapper_2">
+                <div class="trainerNameWrapper">
+                  <p class="trainerPosition">上野校 Webデザイナー専攻トレーナー</p>
+                  <p class="trainerName">藤川さん</p>
+                </div>
+                <div class="trainerDescription">
+                  <p>多摩美術大学グラフィックデザイン学科卒業、フリーのWebディレクター・デザイナー・プログラマーとして活動。個人経営店・中小企業・総合病院・一部上場企業などクライアントの分野や大小を問わず、ニーズにマッチした制作を行う。デザイン業務においてはWebのみならずポスターやチラシ・名刺などの印刷メディアも手がける。2009年から現在まで、東京都立工芸高等学校デザイン科において市民講師として映像とWebの授業を担当。2017年より中小企業・一部上場企業にて研修講師を担当。また複数企業のWeb制作における顧問としても活動中。</p>
+                </div>
+              </div>
+              <img src="img/01Visual_2.png" alt=""  class="trainerPicture trainerPicture_2 rellax" data-rellax-speed="1">
+          </li>
+          </ul>
+        </div>
+      </section>
+      <section class="secondArea" id="secondArea">
+        <h2 class="sectionTitleWrapper rellax" data-rellax-speed="8">
+          <img src="img/sectionTitle_02.png" alt="02" class="sectionTitle_02">
+        </h2>
+        <img src="img/colorBracket_left.png" class="colorBracket_left rellax" alt="" data-rellax-speed="3">
+        <div class="secondAreaContents rellax" data-rellax-speed="1">
+          <p class="secondAreaContentsTitle">豊富なLIVE授業</p>
+          <p class="secondAreaContentsDescription">Web業界はもちろん、Webデザイナーとして働いていく上で必要なスキルが身につくオリジナル授業を開催！フリーランスとして活躍されているトレーナーや、LIGメンバーが講師として登壇し実践的な講義を行います。</p>
+          <ul class="lessonLists lessonLists_1 rellax" data-rellax-speed="1">
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">ディレクション講座</p>
+              <p class="lessonDescription">Web制作に携わるデザイナー、エンジニア含めすべての人が知っておくべきWeb制作の基本を学びます。現場で働くディレクターの声を直接聞き、デザイナーとしての働き方についてのイメージを明確にする事ができます。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">ちゃんれみ</p>
+              </div>
+            </li>
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">グラフィックデザイン講座</p>
+              <p class="lessonDescription">デザインの基礎となる「デッサン」に挑戦していただきます。立体的なモデルを集中して見ることで、光と影の関係を読み解き、基本的な観察力を養いながら、デザインの客観性を磨きます。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">中里トレーナー</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="lessonLists lessonLists_2 rellax" data-rellax-speed="1">
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">デザイナーLT会</p>
+              <p class="lessonDescription">LIGのWebデザイナーが制作実績をもとに、サイトがどのようにして作られたのかを解説します。講座の後は座談会を実施し、LIGが培ってきたデザイン力やWebトレンドなどをざっくばらんにトークしながらインプットすることができます。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">LIG制作陣</p>
+              </div>
+            </li>
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">UX講座</p>
+              <p class="lessonDescription">UXデザインの前に、なぜ今デザインシンキングが注目されているのか？世の中でどのようなことが起こっているのかを交えながら、講座とワークショップを通してUXデザインの重要性を理解し、今後のデザインに役立てていくことができます。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">ヒロさん（株式会社グッドパッチ）</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="lessonLists lessonLists_3 rellax" data-rellax-speed="1">
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">文字組みデザイン講座</p>
+              <p class="lessonDescription">”魅せる”文字について考え、デザインをする上でおさえておいてほしい「文字」のセオリーを学びます。講義とワークショップで構成しており、実際に魅せる文字組みにチャレンジします。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">蜷木トレーナー</p>
+              </div>
+            </li>
+            <li class="lessonList">
+              <img src="img/02Visual_1.png" alt="" class="lessonListImage">
+              <p class="lessonTitle">Webデザイントレンド</p>
+              <p class="lessonDescription">最近のデザインのトレンドと、それを可能にしている技術の紹介をします。実際にデザイナーたちがどのような方法で情報を集めているのか？流行に流されない基礎理論も学べます。</p>
+              <div class="lessonTeacher">
+                <img src="img/teacherPicture_hoge.png" alt="" class="lessonTeacherImage">
+                <p class="lessonTeacherName">相原トレーナー</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="thirdArea" id="thirdArea">
+        <h2 class="sectionTitleWrapper rellax" data-rellax-speed="8">
+          <img src="img/sectionTitle_03.png" alt="03" class="sectionTitle_03">
+        </h2>
+        <img src="img/colorBracket_right.png" class="colorBracket_right rellax" alt="" data-rellax-speed="3">
+        <div class="thirdAreaContents rellax" data-rellax-speed="1">
+          <p class="thirdAreaContentsTitle">充実の転職サポート</p>
+          <div class="thirdAreaContentsAbout">
+            <img src="img/03Visual_1.png" alt="" class="thirdAreaContentsAboutVisual rellax" data-rellax-speed="1">
+            <div class="thirdAreaContentsAboutText">
+              <p class="thirdAreaContentsAboutTitle">卒業後の転職もサポート！</p>
+              <p class="thirdAreaContentsDescription">在学中からWeb業界への就転職へ向けてのポートフォリオ（作品集）作りのアドバイスや、個別での転職相談を行っております。Web業界へ就職・転職をするために役立つ知識や、スキルを身につけることができる転職セミナーも開催！LIGに興味を持ってくださった卒業生の方が、LIGへ入社する機会もございます！</p>
+            </div>
+          </div>
+          <ul class="thirdAreaThmbnails">
+            <li class="thirdAreaThmbnail thirdAreaThmbnail_1">
+              <img src="img/03Thumbnail_1.png" alt="" class="thirdAreaThmbnail thirdAreaThmbnailPicture_1">
+          </li>
+            <li class="thirdAreaThmbnail thirdAreaThmbnail_2">
+              <img src="img/03Thumbnail_2.png" alt=""  class="thirdAreaThmbnail thirdAreaThmbnailPicture_2">
+          </li>
+            <li class="thirdAreaThmbnail thirdAreaThmbnail_3">
+              <img src="img/03Thumbnail_3.png" alt=""  class="thirdAreaThmbnail thirdAreaThmbnailPicture_3">
+          </li>
+          </ul>
+        </div>
+      </section>
+      <section class="priceArea" id="priceArea">
+        <h2 class="sectionTitleWrapper rellax" data-rellax-speed="8">
+          <img src="img/sectionTitle_price.png" alt="price" class="sectionTitle_price">
+        </h2>
+        <img src="img/priceBackground_1.png" alt="" class="priceBackground">
+        <div class="priceAreaContents rellax" data-rellax-speed="3">
+          <ul class="priceAreaLists">
+            <li class="priceAreaList priceAreaList_1">
+              <dl>
+                <dt class="priceAreaListTitle">Webデザイナー専攻</dt>
+                <dd>
+                  <span class="priceAreaListTerm">6ヶ月</span>
+                  <span class="priceAreaListPrice">
+                  ¥450,000
+                  <span class="tax">（税抜）</span>
+                  </span>
+                </dd>
+              </dl>
+            </li>
+            <li class="priceAreaList priceAreaList_2">
+              <dl>
+                <dt class="priceAreaListTitle">Webデザイナー専攻<br>＋Wordpress講座</dt>
+                <dd>
+                  <span class="priceAreaListTerm">8ヶ月</span>
+                  <span class="priceAreaListPrice">
+                  ¥528,000
+                  <span class="tax">（税抜）</span>
+                  </span>
+                </dd>
+              </dl>
+            </li>
+            <li class="priceAreaList priceAreaList_3">
+              <dl>
+                <dt class="priceAreaListTitle">Webプログラミング専攻</dt>
+                <dd>
+                  <span class="priceAreaListTerm">6ヶ月</span>
+                  <span class="priceAreaListPrice">
+                  ¥450,000
+                  <span class="tax">（税抜）</span>
+                  </span>
+                </dd>
+              </dl>
+            </li>
+            <li class="priceAreaList priceAreaList_4">
+              <dl>
+                <dt class="priceAreaListTitle">ネット動画クリエイター専攻</dt>
+                <dd>
+                  <span class="priceAreaListTerm">6ヶ月</span>
+                  <span class="priceAreaListPrice">
+                  ¥450,000
+                  <span class="tax">（税抜）</span>
+                  </span>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <div class="priceAreaSubTexts">
+            <p>上記コースの他にも、様々なコースをご用意しております。分割でのお支払いも可能ですので、説明会時にお気軽にご相談ください。</p>
+          </div>
+        </div>
+      </section>
+      <section class="flowArea" id="flowArea">
+        <h2 class="sectionTitleWrapper rellax" data-rellax-speed="8">
+          <img src="img/sectionTitle_flow.png" alt="01" class="sectionTitle_flow">
+        </h2>
+        <div class="flowAreaContents rellax" data-rellax-speed="1">
+          <div class="flowAreaVerticalLine"></div>
+          <ul class="flowAreaContentsLists">
+            <li class="flowAreaContentsList flowAreaContentsList_1">
+              <img src="img/flowVisual_1.png" alt="" class="flowPicture flowPicture_1 rellax" data-rellax-speed="1">
+              <div class="flowTextWrapper flowTextWrapper_1">
+                <p class="flowName">入学説明会</p>
+                <div class="flowDescription">
+                  <p>「Web業界に就職/転職したい」「フリーランスになりたい」「働きながらでも通える？」「どこから勉強したら良いの？」等、不安やお悩みはたくさんあると思います。「こんなこと聞いていいのかな？」と思うようなことも、お気軽にご相談ください！1人1人お話をお伺いし、目的に合わせたコースや受講スケジュールをご提案させていただきます。</p>
+                </div>
+              </div>
+            </li>
+            <li class="flowAreaContentsList flowAreaContentsList_2">
+              <div class="flowTextWrapper flowTextWrapper_2">
+                <p class="flowName">受講期間</p>
+                <div class="flowDescription">
+                  <p>入学後は当校のトレーナーや運営スタッフがフォローいたします。わからないことがございましたら、いつでも相談できる環境です。マンツーマン指導のため、課題を取り組む中で困ったこともすぐに解決できます。Web業界のトレンドを知れたり、現役クリエイターから学ぶことができる環境で、目的に最短でアプローチできるよう私たちがサポートいたします。</p>
+                </div>
+              </div>
+              <img src="img/flowVisual_2.png" alt=""  class="flowPicture flowPicture_2 rellax" data-rellax-speed="1">
+            </li>
+            <li class="flowAreaContentsList flowAreaContentsList_3">
+              <img src="img/flowVisual_3.png" alt=""  class="flowPicture flowPicture_3 rellax" data-rellax-speed="1">
+              <div class="flowTextWrapper flowTextWrapper_3">
+                <p class="flowName">卒業制作期間</p>
+                <div class="flowDescription">
+                  <p>2ヶ月かけて実践的な「Webサイト制作」を行います。企画・ディレクションの部分からデザイン・コーディングまで担当トレーナーが指導・チェックし、1つのWebサイトを自分で制作します。Webサイト制作を1から体験できることにより、Webデザインの技術を深く身につけていきつつ、卒業後に必要な視点や知識も養うことができます。</p>
+                </div>
+              </div>
+            </li>
+            <li class="flowAreaContentsList flowAreaContentsList_4">
+              <div class="flowTextWrapper flowTextWrapper_4">
+                <p class="flowName">発表会・卒業後</p>
+                <div class="flowDescription">
+                  <p>卒業制作発表会では制作したWebサイトのプレゼンテーションを行います。自分がどのような意図で制作したのかを他者に伝えることで、Webデザイナーに必要なプレゼン力も鍛えられます。卒業後は転職サポートや、1ヶ月のブラッシュアップ期間を通して、新たな一歩を踏み出すための最終調整のサポートを受けることができます。</p>
+                </div>
+              </div>
+              <img src="img/flowVisual_4.png" alt=""  class="flowPicture flowPicture_4 rellax" data-rellax-speed="1">
+            </li>
+          </ul>
+          <div class="flowAreaBottomArea">
+            <img src="img/conversionBtn_briefing.png" alt="説明会予約" class="briefingBtn">
+            <ul class="flowAreaLinks">
+              <li class="flowAreaLink">学校案内資料</li>
+              <li class="flowAreaLink">卒業制作事例集</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="studioPhotoThumbnails">
+        <ul class="photoWrapper">
+          <li class="studioPhoto">
+            <img src="img/bottomVisual_1.png" alt="">
+          </li>
+          <li class="studioPhoto">
+            <img src="img/bottomVisual_2.png" alt="">
+          </li>
+          <li class="studioPhoto">
+            <img src="img/bottomVisual_3.png" alt="">
+          </li>
+          <li class="studioPhoto">
+            <img src="img/bottomVisual_1.png" alt="">
+          </li>
+        </ul>
+      </section>
     </div>
-  </section>
-
-  <section class="courseArea">
-    <h2 class="sectionTitleWrapper">
-      <img src="img/sectionTitle_course.png" alt="course" class="sectionTitle_course rellax" data-rellax-speed="8">
-    </h2>
-    <div class="courseListsWrapper rellax" data-rellax-speed="1">
-      <img src="img/colorFrame.png" alt="" class="courseListsColorFrame rellax" data-rellax-speed="2">
-      <ul class="courseLists rellax" data-rellax-speed="3">
-        <li class="courseList">
-          <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_1">
-          <p class="courseTitle"><span class="alphabet">Web</span>デザイナー専攻</p>
-          <p class="courseDescription">Webデザイナーを目指して、Web制作会社で用いられる基礎スキルから最新のスキルまでを習得！デザイン、コーディング、マーケティングスキル、ディレクションスキル等、Webデザイナーとして必要な知識やスキルを学ぶことができます。</p>
+    <footer class="footerArea">
+      <h1 class="logoWrapper">
+        <img id="logo" class="logo" src="img/logo.png" alt="デジタルハリウッドSTUDIO 上野 by LIG">
+      </h1>
+      <ul class="schoolListWrappr">
+        <li class="schoolList">
+          <address>
+            <dl class="schoolInquiry">
+              <dt class="schoolName">上野校</dt>
+              <dd class="schoolInquiryContent">
+                <p class="schoolInquiryTitle">ADDRESS</p>
+                <p class="address">〒110-0015<br>東京都台東区東上野2-18-7共同ビル 3F</p>
+                <p class="addressDirection">
+                  JR上野駅より徒歩2分<br>地下鉄上野駅3番出口より徒歩30秒
+                </p>
+                <a href="#" class="googleMapLink">Google Map</a>
+                <p class="schoolInquiryTitle tell">TELL</p>
+                <p class="tellNumber">0120-900-294</p>
+              </dd>
+            </dl>
+          </address>
         </li>
-        <li class="courseList">
-          <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_2">
-          <p class="courseTitle"><span class="alphabet">Web</span>プログラミング専攻</p>
-          <p class="courseDescription">Web系エンジニア、フロントエンドエンジニアとして必要なプログラミングや開発スキルを習得！DTPデザイナーからWeb業界へ転身をしたい方や、コーダーとしてスキルアップを目指したい方にオススメのコースです。
-          </p>
+        <li class="schoolList">
+          <address>
+            <dl class="schoolInquiry">
+              <dt class="schoolName">池袋校</dt>
+              <dd class="schoolInquiryContent">
+                <p class="schoolInquiryTitle">ADDRESS</p>
+                <p class="address">〒171-0022<br>東京都豊島区南池袋1丁目19-12<br>山の手ビル東館 6F</p>
+                <p class="addressDirection">西武鉄道池袋駅 東口から徒歩5分</p>
+                <a href="#" class="googleMapLink">Google Map</a>
+                <p class="schoolInquiryTitle tell">TELL</p>
+                <p class="tellNumber">0120-900-294</p>
+            </dl>
+          </address>
         </li>
-        <li class="courseList">
-          <img src="img/courseVisual.png" alt="" class="courseListImage courseListImage_3">
-          <p class="courseTitle">ネット動画クリエイター専攻</p>
-          <p class="courseDescription">動画領域に必要な最新スキルとクリエイティブ力を習得！基礎〜応用までの動画編集スキルや撮影スキルだけでなく、企画力やシナリオ作成、動画マーケティングなど、第一線で活躍するクリエイターに必要なスキルを基礎から学ぶことができます。
-          </p>
-        </li>
-      </ul>      
-    </div>
-  </section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.js" type="text/javascript"></script>
-<script src="js/index.js" type="text/javascript"></script>
+      </ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/index.js" type="text/javascript"></script>
 </body>
 
 </html>
